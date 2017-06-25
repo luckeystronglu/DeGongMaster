@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_home"
+    android:orientation="vertical" >
+
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+
+    <!--<com.customview.selfheader.HeaderRightImageView-->
+        <!--android:id="@+id/header_login_activity"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/shape_bg_themefill"-->
+        <!--app:rightIconVisible="gone"-->
+        <!--app:middleTitle="登陆页面"/>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:text="德工智动"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_22sp"
+        android:layout_marginTop="@dimen/vertical_60"
+        android:drawablePadding="@dimen/vertical_2"
+        android:drawableTop="@drawable/logo_yzh"
+        />
+
+    <!--账号 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/vertical_56"
+        android:layout_marginLeft="@dimen/horizontal_30"
+        android:layout_marginRight="@dimen/horizontal_30"
+        android:layout_marginTop="@dimen/vertical_35"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape_login_et"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_login_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:digits="@string/digits_et_char"
+            android:gravity="center"
+            android:hint="请输入您的用户名"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/font_16sp" />
+        <!--输入限定字符-->
+        <!--android:digits="@string/digits_et_char"-->
+
+    </LinearLayout>
+
+
+    <!--密码 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/vertical_56"
+        android:layout_marginLeft="@dimen/horizontal_30"
+        android:layout_marginRight="@dimen/horizontal_30"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/vertical_35"
+        android:background="@drawable/shape_login_et"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_login_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="请输入您的密码"
+            android:inputType="numberPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/font_16sp" />
+
+    </LinearLayout>
+
+    <!--登陆 -->
+    <LinearLayout
+        android:id="@+id/ll_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/vertical_56"
+        android:layout_marginLeft="@dimen/horizontal_30"
+        android:layout_marginRight="@dimen/horizontal_30"
+        android:layout_marginTop="@dimen/vertical_35"
+        android:background="@drawable/shape_login_et_bluefill"
+        android:gravity="center"
+        android:onClick="loginClick"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_18sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/horizontal_30"
+        android:layout_marginRight="@dimen/horizontal_30"
+        android:layout_marginTop="@dimen/vertical_2">
+
+        <com.customview.switchbutton.SwitchButton
+            android:id="@+id/switch_auto_login"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/horizontal_80"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/switch_auto_login"
+            android:layout_marginRight="@dimen/horizontal_16"
+            android:layout_centerVertical="true"
+            android:text="@string/auto_login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_16sp" />
+
+    </RelativeLayout>
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:layout_marginTop="@dimen/y30">-->
+        <!--<EditText-->
+            <!--android:id="@+id/username"-->
+            <!--android:layout_width="@dimen/x200"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:layout_marginTop="@dimen/y20">-->
+        <!--<EditText-->
+            <!--android:id="@+id/password"-->
+            <!--android:layout_width="@dimen/x200"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:gravity="center"-->
+            <!--/>-->
+    <!--</LinearLayout>-->
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:layout_marginTop="@dimen/y30">-->
+        <!--<Button-->
+            <!--android:id="@+id/btn_login"-->
+            <!--android:background="@drawable/shape_bg_themefill"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_width="@dimen/x200"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="登陆"-->
+            <!--/>-->
+    <!--</LinearLayout>-->
+
+	
+</LinearLayout>

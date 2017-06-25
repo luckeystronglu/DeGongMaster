@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!--android:background="@drawable/shape_dialog"-->
+
+    <RelativeLayout
+        android:background="@drawable/shape_dialog_top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deleteAll"
+            android:textSize="@dimen/font_20sp"
+            android:paddingLeft="@dimen/horizontal_12"
+            android:paddingRight="@dimen/horizontal_12"
+            android:paddingTop="@dimen/vertical_20"
+            android:paddingBottom="@dimen/vertical_20"
+            android:layout_marginLeft="@dimen/horizontal_16"
+            android:textColor="@color/white"
+            />
+        <ImageView
+            android:id="@+id/dlg_iv_delete"
+            android:src="@drawable/icon_delete"
+            android:paddingRight="@dimen/horizontal_20"
+            android:paddingLeft="@dimen/horizontal_10"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="@string/dialog_delete_all_content"
+            android:layout_marginLeft="@dimen/horizontal_10"
+            android:paddingLeft="@dimen/horizontal_12"
+            android:paddingRight="@dimen/horizontal_12"
+            android:paddingTop="@dimen/vertical_20"
+            android:paddingBottom="@dimen/vertical_20"
+            android:textSize="@dimen/font_16sp"
+            android:textColor="@color/text_dark_gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/bottom_tab_divider_line_color"/>
+    <LinearLayout
+        android:divider="@drawable/diliver_vertical_line"
+        android:showDividers="middle"
+        android:background="@drawable/shape_dialog_bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- 取消 -->
+        <TextView
+            android:id="@+id/dlg_tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="@dimen/horizontal_12"
+            android:paddingRight="@dimen/horizontal_12"
+            android:paddingTop="@dimen/vertical_16"
+            android:paddingBottom="@dimen/vertical_16"
+            android:textSize="@dimen/font_16sp"
+            android:clickable="true"
+            android:gravity="center"
+            android:textColor="@color/text_dark_gray"
+            android:text="@string/dialog_cancel"
+            />
+
+        <!-- 确定 -->
+        <TextView
+            android:id="@+id/dlg_tv_sure"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:clickable="true"
+            android:textColor="@color/dialog_sure_orange"
+            android:textSize="@dimen/font_16sp"
+            android:text="@string/dialog_sure"
+            />
+    </LinearLayout>
+
+</LinearLayout>

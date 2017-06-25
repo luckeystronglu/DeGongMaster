@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.customview.selfheader.HeaderRightTextView
+        android:id="@+id/header_frag_me"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/vertical_70"
+        android:background="@drawable/shape_bg_themefill"
+        app:leftIconVisible="gone"
+        app:rightText="我的页面右键" />
+
+
+</LinearLayout>

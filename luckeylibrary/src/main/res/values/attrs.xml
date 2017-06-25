@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--头部控件(右边图片)-->
+    <!--<declare-styleable name="header_right_imageview">-->
+    <declare-styleable name="HeaderRightImageView">
+        <attr name="leftIcon" format="reference"/>
+        <attr name="rightIcon" format="reference"/>
+        <attr name="middleTitle" format="reference|string"/>
+        <attr name="leftIconVisible">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+            <enum name="gone" value="2"/>
+        </attr>
+        <attr name="rightIconVisible">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+            <enum name="gone" value="2"/>
+        </attr>
+    </declare-styleable>
+
+
+    <!--头部控件(右边文字)-->
+    <declare-styleable name="HeaderRightTextView">
+        <attr name="h2leftIcon" format="reference"/>
+        <attr name="rightText" format="reference|string"/>
+        <attr name="h2middleTitle" format="reference|string"/>
+        <attr name="h2leftIconVisible">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+            <enum name="gone" value="2"/>
+        </attr>
+        <attr name="rightTextVisible">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+            <enum name="gone" value="2"/>
+        </attr>
+    </declare-styleable>
+
+
+</resources>

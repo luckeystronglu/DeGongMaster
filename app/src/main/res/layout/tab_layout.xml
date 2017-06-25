@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#ffffff"
+              android:orientation="vertical">
+
+    <!-- 分割线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/bottom_tab_divider_line_color"
+        />
+
+    <!-- 底部Tab导航 -->
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/vertical_76"
+        android:orientation="horizontal">
+
+        <!-- 首页按钮 -->
+        <RadioButton
+            android:id="@+id/rb_frag_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="首页"
+            android:textColor="@drawable/selector_bottom_tabchoice_textcolor"
+            android:drawableTop="@drawable/selector_bottom_tab_home"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/vertical_10"
+
+            />
+
+        <!-- 数据按钮 -->
+        <RadioButton
+            android:id="@+id/rb_frag_data"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="数据"
+            android:textColor="@drawable/selector_bottom_tabchoice_textcolor"
+            android:drawableTop="@drawable/selector_bottom_tab_data"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/vertical_10"
+
+
+            />
+
+
+        <!-- 发现按钮 -->
+        <RadioButton
+            android:id="@+id/rb_frag_discover"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="发现"
+            android:textColor="@drawable/selector_bottom_tabchoice_textcolor"
+            android:drawableTop="@drawable/selector_bottom_tab_discover"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/vertical_10"
+            />
+
+
+        <!--  "我"的按钮 -->
+        <RadioButton
+            android:id="@+id/rb_frag_my"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:textColor="@drawable/selector_bottom_tabchoice_textcolor"
+            android:text="我的"
+            android:drawableTop="@drawable/selector_bottom_tab_me"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/vertical_10"
+            />
+
+    </RadioGroup>
+
+</LinearLayout>
