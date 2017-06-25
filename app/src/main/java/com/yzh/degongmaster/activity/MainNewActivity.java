@@ -6,10 +6,12 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.customview.selfheader.HeaderRightImageView;
+import com.customview.view.SelfListview;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.yzh.base.BaseActivity;
 import com.yzh.degongmaster.R;
+import com.yzh.degongmaster.adapter.HomeLvAdapter;
 import com.yzh.model.LoginItemEntity;
 
 import org.json.JSONArray;
@@ -27,6 +29,8 @@ public class MainNewActivity extends BaseActivity {
     private String loginString;
     private List<LoginItemEntity> itemList;
 
+    private SelfListview selfListview;
+    private HomeLvAdapter homeLvAdapter;
 
     @Override
     protected int getActivityContentId() {
@@ -37,6 +41,31 @@ public class MainNewActivity extends BaseActivity {
         rightImageView = findViewByIds(R.id.header_main_new);
         Intent intent = getIntent();
         loginString = intent.getStringExtra("LoginString");
+
+        selfListview = findViewByIds(R.id.self_lv_home);
+        homeLvAdapter = new HomeLvAdapter(this);
+        selfListview.setAdapter(homeLvAdapter);
+
+    }
+
+    @Override
+    protected void initEvent() {
+        rightImageView.setonclickListener(new HeaderRightImageView.clickHeaderListener() {
+            @Override
+            public void onClickLeftIcon() {
+                startActivity(new Intent(MainNewActivity.this,MainActivity.class));
+            }
+
+            @Override
+            public void onClickRightIcon(View view) {
+
+            }
+        });
+    }
+
+
+    @Override
+    protected void loadDatas() {
         if (loginString != null && !loginString.equals("")) {
             //删除Xml标题头,并去掉首尾空格
             if (loginString.contains("<?xml version=\"1.0\" encoding=\"utf-8\"?>")) {
@@ -55,7 +84,8 @@ public class MainNewActivity extends BaseActivity {
                         TypeToken<List<LoginItemEntity>> tt = new TypeToken<List<LoginItemEntity>>() {
                         };
                         itemList = new Gson().fromJson(itemLists.toString(), tt.getType());
-                        int size = itemList.size();
+//                        int size = itemList.size();
+                        homeLvAdapter.setDatas(itemList);
                     }
 
                 } catch (JSONException e) {
@@ -64,22 +94,6 @@ public class MainNewActivity extends BaseActivity {
             }
         }
     }
-
-    @Override
-    protected void initEvent() {
-        rightImageView.setonclickListener(new HeaderRightImageView.clickHeaderListener() {
-            @Override
-            public void onClickLeftIcon() {
-                startActivity(new Intent(MainNewActivity.this,MainActivity.class));
-            }
-
-            @Override
-            public void onClickRightIcon(View view) {
-
-            }
-        });
-    }
-
 
     private long pressTime;
 
